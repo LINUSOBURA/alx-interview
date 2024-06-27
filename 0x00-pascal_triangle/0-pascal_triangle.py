@@ -1,4 +1,16 @@
+#!/usr/bin/python3
+"""
+0-pascal_triangle
+"""
+
+
 def pascal_triangle(n):
+    """
+    Generates a Pascal's triangle of height n.
+
+    :param n: An integer representing the height of the triangle.
+    :return: A list of lists containing the Pascal's triangle up to height n.
+    """
     if n <= 0:
         return []
 
