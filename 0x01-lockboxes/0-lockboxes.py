@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+"""Lockboxes"""
 
 
 def canUnlockAll(boxes):
     """Return True if all boxes can be unlocked, else return False
-	Args:
-		boxes (list): list of boxes"""
+    Args:
+      boxes (list): list of boxes"""
 
     opened_boxes = {0}
     stack = [0]
