@@ -41,13 +41,15 @@ def get_prime_fators(n):
 
 def minOperations(n):
     """
-    Calculate the minimum number of operations needed to reach a given number.
+    Calculate the minimum number of operations
+    needed to reach a given number.
 
     Parameters:
         n (int): The target number.
 
     Returns:
-        int: The minimum number of operations needed to reach the target number.
+        int: The minimum number of operations
+        needed to reach the target number.
     """
     if n <= 1:
         return 0
