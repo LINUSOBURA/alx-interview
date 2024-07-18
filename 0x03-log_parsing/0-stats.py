@@ -23,6 +23,16 @@ status_code_count = {
     '500': 0
 }
 
+
+def print_statistics():
+    """Print the collected statistics"""
+    print(f"File size: {size}")
+    for code in sorted(status_code_count.keys()):
+        count = status_code_count[code]
+        if count > 0:
+            print(f"{code}: {count}")
+
+
 try:
     for line in sys.stdin:
         line = line.strip()
@@ -36,18 +46,12 @@ try:
                 total_codes += 1
 
             if total_codes == 10:
-                print(f"File size: {size}")
-                for code, count in status_code_count.items():
-                    if count > 0:
-                        print(f"{code}: {count}")
+                print_statistics()
 
                 total_codes = 0
                 status_code_count = {key: 0 for key in status_code_count}
 
 except KeyboardInterrupt:
-    print(f"File size: {size}")
-    for code, count in status_code_count.items():
-        if count > 0:
-            print(f"{code}: {count}")
+    print_statistics()
 
     sys.exit()
