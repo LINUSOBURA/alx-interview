@@ -7,8 +7,8 @@ import re
 import sys
 
 pattern = re.compile(
-    r'^([0-9]+(\.[0-9]+)+) - \[[^\]]*\] "(?:[^"]|"")*" [0-9]+ [0-9]+$',
-    re.IGNORECASE)
+    r'^\d{1,3}(\.\d{1,3}){3} - \[[^\]]+\] "GET /projects/260 HTTP/1\.1" \d{3} \d+$'
+)
 
 size = 0
 total_codes = 0
