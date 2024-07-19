@@ -50,7 +50,7 @@ if __name__ == "__main__":
                     print_statistics()
 
                     total_codes = 0
-                    status_code_count = {key: 0 for key in status_code_count}
+                    # status_code_count = {key: 0 for key in status_code_count}
 
     finally:
         print_statistics()
