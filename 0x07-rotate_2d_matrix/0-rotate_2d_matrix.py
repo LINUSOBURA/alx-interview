@@ -10,6 +10,6 @@ def rotate_2d_matrix(matrix):
         """transposing the matrix"""
         for j in range(i, matrix_len):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
-        """reverse the matrix"""
-        for i in range(matrix_len):
-            matrix[i].reverse()
+    """reverse the matrix"""
+    for i in range(matrix_len):
+        matrix[i].reverse()
