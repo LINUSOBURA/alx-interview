@@ -7,7 +7,8 @@ def makeChange(coins, total):
     if total <= 0:
         return 0
 
-    # Initialize the dp array with a value larger than the maximum possible number of coins needed
+    # Initialize the dp array with a value larger than the
+    # maximum possible number of coins needed
     dp = [float('inf')] * (total + 1)
 
     # Base case: zero coins are needed to make the total of 0
@@ -19,5 +20,6 @@ def makeChange(coins, total):
             if dp[amount - coin] != float('inf'):
                 dp[amount] = min(dp[amount], dp[amount - coin] + 1)
 
-    # If dp[total] is still infinity, it means the total cannot be met with the given coins
+    # If dp[total] is still infinity, it means the total cannot
+    # be met with the given coins
     return dp[total] if dp[total] != float('inf') else -1
