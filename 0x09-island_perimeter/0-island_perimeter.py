@@ -17,8 +17,8 @@ def island_perimeter(grid):
         for c in range(cols):
             # If the cell is land
             if grid[r][c] == 1:
-                """Check the four possible sides (up, down, 
-                left, right) Add to perimeter if the neighboring 
+                """Check the four possible sides (up, down,
+                left, right) Add to perimeter if the neighboring
                 cell is water or out of bounds"""
                 if r == 0 or grid[r - 1][c] == 0:  # Check above
                     perimeter += 1
