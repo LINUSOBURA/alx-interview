@@ -11,8 +11,8 @@ def isWinner(x, nums):
 
     def sieve_of_eratosthenes(n):
         """
-			The Sieve of Eratosthenes algorithm to find all prime numbers up to n.
-			"""
+        The Sieve of Eratosthenes algorithm to find all prime numbers up to n.
+        """
         primes = []
         sieve = [True] * (n + 1)
         sieve[0] = sieve[1] = False
@@ -25,12 +25,11 @@ def isWinner(x, nums):
 
     def play_game(n):
         """
-			Play the prime game.
-
-			The game is played with two players, Maria and Ben. The game is played
-			with a list of numbers, and the players take turns removing prime numbers
-			from the list. The last player who made a move is the winner.
-			"""
+        Play the prime game.
+        The game is played with two players, Maria and Ben. The game is played
+        with a list of numbers, and the players take turns removing prime
+        numbers from the list. The last player who made a move is the winner.
+        """
         primes = sieve_of_eratosthenes(n)
         remaining_numbers = set(range(1, n + 1))
         turn = 0  # 0 for Maria, 1 for Ben
